@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return ( 
         <nav className="navbar">
-            <h1>The Hongzheng Blog</h1>
+            <h1>The liuaoao Blog</h1>
             <div className="links">
                 {/* link的话不用refresh */}
                 <Link to="/">Home</Link>
