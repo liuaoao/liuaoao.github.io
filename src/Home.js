@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import BlogList from './BlogList'
-import useFetch from "./fetch";
+import useFetch from "./useFetch";
 
 const Home = () => {
     // 初始化数据
@@ -22,7 +22,7 @@ const Home = () => {
 
     return ( 
         <div className="home">
-            { error && <div>{error}</div>}
+            { error && <div>{error}, please run localhost:8000 json-server</div>}
             { isPenging && <div>Loading...</div>}
 
             {blogs && <BlogList blogs={blogs} title='All Blogs'/>}
