@@ -1,6 +1,6 @@
 {
   "private": true,
-  "homepage": "./",
+  "homepage": "https://liuaoao.github.io",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
