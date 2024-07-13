@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* .navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: #e8f5e9;
+} */
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h1 {
+    color: #6B8E23;
+}
+
+.navbar .links {
+    margin-left: auto;
+    font-weight: 700;
+    text-emphasis-color: #000000;
+}
+
+.navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.navbar a:hover {
+    color: #6B8E23;
+}
+
+
+.container {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.sidebar {
+    width: 250px;
+    border-right: 1px solid #f2f2f2;
+    padding-right: 20px;
+    overflow-y: auto;
+    /* 如果内容过多，添加滚动条 */
+    word-wrap: break-word;
+    /* 自动换行 */
+}
+
+.main {
+    flex: 1;
+    padding-left: 20px;
+    max-width: 550px;
+    /* 设置最大宽度 */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #388e3c;
+    display: block;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    /* 不换行 */
+    overflow: hidden;
+    /* 隐藏溢出内容 */
+    text-overflow: ellipsis;
+    /* 添加省略号 */
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}

@@ -1,41 +1,29 @@
-import logo from './logo.svg';
-import Navbar from './Navbar';
-import Home from './Home.js'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Create from './create.js'
-import BlogDetails from './BlogDetails.js';
-import NotFound from './NotFound.js';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Home from './Home';
+import Article from './components/Article';
+import './App.css'; // 引入CSS文件
+import NotFound from './components/NotFound';
 
-function App() {
-  const title = 'Welcome to the new blog';
-  const likes = 1;
-  const person = {name: 'yoshi', age:30};
-  const link = 'http://www.google.com'
-  return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          {/* <Home /> */}
-          <Switch>
-            {/* 主页的路由 */}
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/create">
-              <Create />
-            </Route>
-            <Route path="/blogs/:id">
-              <BlogDetails />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-        </div>
-      </div>
-    </Router>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <div>
+                <Navbar />
+                <div className="container">
+                    <Sidebar />
+                    <main className="main">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/articles/*" element={<Article />} />
+                        </Routes>
+                    </main>
+                </div>
+            </div>
+        </Router>
+    );
+};
 
 export default App;
